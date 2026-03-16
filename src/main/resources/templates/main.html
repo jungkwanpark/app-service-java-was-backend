@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <h2>원하는 주식 종목(티커)를 입력하세요</h2>
+    <form action="/send-ticker" method="post">
+        <input type="text" name="stockTicker" placeholder="ex: AAPL">
+        <button type="submit">분석 요청하기</button>
+    </form>
+    
+    <div th:if="${error != null}" style="color: red; margin-top: 20px;">
+        <p th:text="${error}"></p>
+    </div>
+</body>
+</html>

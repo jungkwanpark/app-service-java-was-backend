@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>주식 분석 결과</title>
+</head>
+<body>
+    <h2>AI Agent 주식 분석 결과</h2>
+    <div style="border: 1px solid #ccc; padding: 20px; max-width: 500px; background-color: #f9f9f9;">
+        <p><strong>주식 종목 (Ticker):</strong> <span th:text="${ticker}"></span></p>
+        <p><strong>AI 추천 점수:</strong> <span th:text="${score}"></span> / 5</p>
+        <p><strong>종합 분석 의견:</strong> <span th:text="${reply}"></span></p>
+        <hr>
+        <p style="font-size: 12px; color: gray;">데이터 출처: <span th:text="${source}"></span></p>
+    </div>
+    <br>
+    <button onclick="location.href='/main'">다른 주식 검색하기</button>
+</body>
+</html>
